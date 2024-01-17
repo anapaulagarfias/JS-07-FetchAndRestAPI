@@ -41,6 +41,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   console.log(pokemon.weight);
   console.log(pokemon.id);
   console.log(pokemon.sprites.front_default);
+  showInfo(
+    pokemon.name,
+    pokemon.id,
+    pokemon.weight,
+    pokemon.sprites.front_default
+  );
 });
 
 // obtener el anterior
@@ -57,6 +63,12 @@ document.getElementById("previous-btn").addEventListener("click", async () => {
   console.log(pokemon.id);
   console.log(pokemon.sprites.front_default);
   localStorage.setItem("currentPokeId", pokemon.id);
+  showInfo(
+    pokemon.name,
+    pokemon.id,
+    pokemon.weight,
+    pokemon.sprites.front_default
+  );
 });
 
 document.getElementById("next-btn").addEventListener("click", async () => {
@@ -68,15 +80,23 @@ document.getElementById("next-btn").addEventListener("click", async () => {
   console.log(pokemon.id);
   console.log(pokemon.sprites.front_default);
   localStorage.setItem("currentPokeId", pokemon.id);
+  showInfo(
+    pokemon.name,
+    pokemon.id,
+    pokemon.weight,
+    pokemon.sprites.front_default
+  );
 });
 
 const showInfo = (name, id, weight, img) => {
   const nombreCard = document.getElementById("info-name");
   const idCard = document.getElementById("info-id");
-  const weightCard = document.getElementById("info.weight");
+  const weightCard = document.getElementById("info-weight");
   const imagenCard = document.getElementById("imagen");
   nombreCard.innerHTML = name;
-  idCard.innerHTML =
+  idCard.innerHTML = id;
+  weightCard.innerHTML = weight;
+  imagenCard.src = img;
 };
 
 ////////////////// POST
