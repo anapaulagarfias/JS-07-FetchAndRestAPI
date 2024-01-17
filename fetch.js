@@ -56,6 +56,7 @@ document.getElementById("previous-btn").addEventListener("click", async () => {
   console.log(pokemon.weight);
   console.log(pokemon.id);
   console.log(pokemon.sprites.front_default);
+  localStorage.setItem("currentPokeId", pokemon.id);
 });
 
 document.getElementById("next-btn").addEventListener("click", async () => {
@@ -66,6 +67,7 @@ document.getElementById("next-btn").addEventListener("click", async () => {
   console.log(pokemon.weight);
   console.log(pokemon.id);
   console.log(pokemon.sprites.front_default);
+  localStorage.setItem("currentPokeId", pokemon.id);
 });
 
 const showInfo = (name, id, weight, img) => {
@@ -74,7 +76,7 @@ const showInfo = (name, id, weight, img) => {
   const weightCard = document.getElementById("info.weight");
   const imagenCard = document.getElementById("imagen");
   nombreCard.innerHTML = name;
-  idCard.innerHTML = 
+  idCard.innerHTML =
 };
 
 ////////////////// POST
