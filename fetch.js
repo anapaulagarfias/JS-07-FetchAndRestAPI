@@ -31,6 +31,12 @@ document.getElementById("get-btn").addEventListener("click", async () => {
   console.log(pokemon.weight);
   console.log(pokemon.id);
   console.log(pokemon.sprites.front_default);
+  showInfo(
+    pokemon.name,
+    pokemon.id,
+    pokemon.weight,
+    pokemon.sprites.front_default
+  );
 });
 
 document.addEventListener("DOMContentLoaded", async () => {
